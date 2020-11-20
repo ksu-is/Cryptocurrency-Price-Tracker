@@ -105,40 +105,40 @@ update_time()
 
 # -----Update BTC Price-----
 pricefont_BTC = Font(family = "Open Sans", size = 22)
-price_label_BTC = tk.Label(frame, font = pricefont_BTC, bg ='#0080ff', fg = '#f2f2f2')
+price_label_BTC = tk.Label(frame, font = pricefont_BTC, bg ='#0080ff', fg = '#000000')
 price_label_BTC.place(relx = 0.35, rely = 0.55)
 BTC_price = update_BTC() 
 
 pricefont_secondary = Font(family = "Open Sans", size = 18, slant = "italic")
 # ------24hr ago price of BTC-----
-p24_BTC_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#f2f2f2')
+p24_BTC_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#000000')
 p24_BTC_label.place(relx = 0.35, rely = 0.6)
 update_24hr_BTC()
 
 # -----Update ETH Price-----
-price_label_ETH = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#f2f2f2')
+price_label_ETH = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#000000')
 price_label_ETH.place(relx = 0.75, rely = 0.25)
 ETH_price = update_ETH() 
 # ------24hr ago price of ETH-----
-p24_ETH_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#f2f2f2')
+p24_ETH_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#000000')
 p24_ETH_label.place(relx = 0.75, rely = 0.3)
 update_24hr_ETH()
 
 # -----Update LTC Price-----
-price_label_LTC = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#f2f2f2')
+price_label_LTC = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#000000')
 price_label_LTC.place(relx = 0.75, rely = 0.52)
 LTC_price = update_LTC()
 # ------24hr ago price of LTC-----
-p24_LTC_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#f2f2f2')
+p24_LTC_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#000000')
 p24_LTC_label.place(relx = 0.75, rely = 0.57)
 update_24hr_LTC()
 
 # -----Update XLM Price-----
-price_label_XLM = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#f2f2f2')
+price_label_XLM = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#000000')
 price_label_XLM.place(relx = 0.75, rely = 0.8)
 XLM_price = update_XLM()
 # ------24hr ago price of XLM-----
-p24_XLM_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#f2f2f2')
+p24_XLM_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#000000')
 p24_XLM_label.place(relx = 0.75, rely = 0.85)
 update_24hr_XLM()
 
@@ -184,24 +184,24 @@ crypto_label_XLM.place(relx = 0.65, rely = 0.7)
 
 	# ---Bitcoin---#
 headerfont_BTC = Font(family = "News Gothic", size = 52)
-label_BTC = tk.Label(frame, text = "Bitcoin", font = headerfont_BTC, bg = '#0080ff', fg = '#f2f2f2', 
+label_BTC = tk.Label(frame, text = "Bitcoin", font = headerfont_BTC, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
 label_BTC.place(relx = 0.35, rely = 0.44)
 
 headerfont_secondary = Font(family = "Open Sans", size = 28, slant = "italic")
 
 	# ---Ethereum---#
-label_ETH = tk.Label(frame, text = "Ethereum", font = headerfont_secondary, bg = '#0080ff', fg = '#f2f2f2', 
+label_ETH = tk.Label(frame, text = "Ethereum", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
 label_ETH.place(relx = 0.75, rely = 0.18)
 
 	# ---Litecoin---#
-label_LTC = tk.Label(frame, text = "Litecoin", font = headerfont_secondary, bg = '#0080ff', fg = '#f2f2f2', 
+label_LTC = tk.Label(frame, text = "Litecoin", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
 label_LTC.place(relx = 0.75, rely = 0.45)
 
 	# ---Stellar Lumens---#
-label_XLM = tk.Label(frame, text = "Stellar \n Lumens", font = headerfont_secondary, bg = '#0080ff', fg = '#f2f2f2', 
+label_XLM = tk.Label(frame, text = "Stellar \n Lumens", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
 label_XLM.place(relx = 0.75, rely = 0.67)
 
