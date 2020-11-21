@@ -7,7 +7,7 @@ import dateutil.parser
 class functions: 
 
 	price_list = ["HTTPS://api.coinbase.com/v2/prices/BTC-USD/spot", "HTTPS://api.coinbase.com/v2/prices/ETH-USD/spot", 
-			"HTTPS://api.coinbase.com/v2/prices/LTC-USD/spot", "HTTPS://api.coinbase.com/v2/prices/XLM-USD/spot"]
+			"HTTPS://api.coinbase.com/v2/prices/LTC-USD/spot", "HTTPS://api.coinbase.com/v2/prices/XLM-USD/spot", "HTTPS://api.coinbase.com/v2/prices/XRP-USD/spot", "HTTPS://api.coinbase.com/v2/prices/BCH-USD/spot"]
 	
 
 	def print_data(data): #Takes in the pricing data returned from api and prints to console
