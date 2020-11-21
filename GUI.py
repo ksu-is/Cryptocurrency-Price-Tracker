@@ -170,11 +170,11 @@ update_24hr_LTC()
 
 # -----Update XLM Price-----
 price_label_XLM = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#000000')
-price_label_XLM.place(relx = 0.75, rely = 0.9)
+price_label_XLM.place(relx = 0.75, rely = 0.88)
 XLM_price = update_XLM()
 # ------24hr ago price of XLM-----
 p24_XLM_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#000000')
-p24_XLM_label.place(relx = 0.75, rely = 0.95)
+p24_XLM_label.place(relx = 0.75, rely = 0.93)
 update_24hr_XLM()
 
 # -----Update XRP Price-----
@@ -223,9 +223,21 @@ im1_XLM = Image.open("XLM.png")
 im2_XLM = im1_XLM.resize((100, 100), Image.ANTIALIAS)
 XLM_image = ImageTk.PhotoImage(im2_XLM)
 crypto_label_XLM = tk.Label(frame, image = XLM_image, borderwidth = 0)
-crypto_label_XLM.place(relx = 0.65, rely = 0.8)
+crypto_label_XLM.place(relx = 0.65, rely = 0.75)
 
+	#---Ripple---#
+im1_XRP = Image.open("XRP.png")
+im2_XRP = im1_XRP.resize((100, 100), Image.ANTIALIAS)
+XRP_image = ImageTk.PhotoImage(im2_XRP)
+crypto_label_XRP = tk.Label(frame, image = XRP_image, borderwidth = 0)
+crypto_label_XRP.place(relx = 0.65, rely = 0.25)
 
+	#---Bitcoin Cash---#
+im1_BCH = Image.open("BCH.png")
+im2_BCH = im1_BCH.resize((100, 100), Image.ANTIALIAS)
+BCH_image = ImageTk.PhotoImage(im2_BCH)
+crypto_label_BCH = tk.Label(frame, image = BCH_image, borderwidth = 0)
+crypto_label_BCH.place(relx = 0.65, rely = 0.45)
 
 # -------Graphs Button & Font--------------------------------------------------------------------
 # buttonfont = Font(family = "Open Sans", size = 20, slant = "italic")
@@ -267,7 +279,7 @@ label_XRP.place(relx = 0.75, rely = 0.45)
 	# ---Stellar Lumens---#
 label_XLM = tk.Label(frame, text = "Stellar \n Lumens", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
-label_XLM.place(relx = 0.75, rely = 0.77)
+label_XLM.place(relx = 0.75, rely = 0.75)
 
 # -----Your amount Entry-----#		# Need to empty entry upon click
 font_entry = Font(family = "Open Sans", size = 18, slant = "italic")
