@@ -117,29 +117,29 @@ update_24hr_BTC()
 
 # -----Update ETH Price-----
 price_label_ETH = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#000000')
-price_label_ETH.place(relx = 0.75, rely = 0.25)
+price_label_ETH.place(relx = 0.45, rely = 0.15)
 ETH_price = update_ETH() 
 # ------24hr ago price of ETH-----
 p24_ETH_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#000000')
-p24_ETH_label.place(relx = 0.75, rely = 0.3)
+p24_ETH_label.place(relx = 0.45, rely = 0.2)
 update_24hr_ETH()
 
 # -----Update LTC Price-----
 price_label_LTC = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#000000')
-price_label_LTC.place(relx = 0.75, rely = 0.52)
+price_label_LTC.place(relx = 0.75, rely = 0.12)
 LTC_price = update_LTC()
 # ------24hr ago price of LTC-----
 p24_LTC_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#000000')
-p24_LTC_label.place(relx = 0.75, rely = 0.57)
+p24_LTC_label.place(relx = 0.75, rely = 0.17)
 update_24hr_LTC()
 
 # -----Update XLM Price-----
 price_label_XLM = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#000000')
-price_label_XLM.place(relx = 0.75, rely = 0.8)
+price_label_XLM.place(relx = 0.75, rely = 0.9)
 XLM_price = update_XLM()
 # ------24hr ago price of XLM-----
 p24_XLM_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#000000')
-p24_XLM_label.place(relx = 0.75, rely = 0.85)
+p24_XLM_label.place(relx = 0.75, rely = 0.95)
 update_24hr_XLM()
 
 
@@ -157,21 +157,21 @@ im1_ETH = Image.open("ETH.png")
 im2_ETH = im1_ETH.resize((100, 162), Image.ANTIALIAS)
 ETH_image = ImageTk.PhotoImage(im2_ETH)
 crypto_label_ETH = tk.Label(frame, image = ETH_image, borderwidth = 0)
-crypto_label_ETH.place(relx = 0.65, rely = 0.12)
+crypto_label_ETH.place(relx = 0.35, rely = 0.02)
 
 	# ---Litecoin---#
 im1_LTC = Image.open("LTC.png")
 im2_LTC = im1_LTC.resize((100, 100), Image.ANTIALIAS)
 LTC_image = ImageTk.PhotoImage(im2_LTC)
 crypto_label_LTC = tk.Label(frame, image = LTC_image, borderwidth = 0)
-crypto_label_LTC.place(relx = 0.65, rely = 0.45)
+crypto_label_LTC.place(relx = 0.65, rely = 0.05)
 	
 	#---Stellar Lumens---#
 im1_XLM = Image.open("XLM.png")
 im2_XLM = im1_XLM.resize((100, 100), Image.ANTIALIAS)
 XLM_image = ImageTk.PhotoImage(im2_XLM)
 crypto_label_XLM = tk.Label(frame, image = XLM_image, borderwidth = 0)
-crypto_label_XLM.place(relx = 0.65, rely = 0.7)
+crypto_label_XLM.place(relx = 0.65, rely = 0.8)
 
 # -------Graphs Button & Font--------------------------------------------------------------------
 # buttonfont = Font(family = "Open Sans", size = 20, slant = "italic")
@@ -193,17 +193,17 @@ headerfont_secondary = Font(family = "Open Sans", size = 28, slant = "italic")
 	# ---Ethereum---#
 label_ETH = tk.Label(frame, text = "Ethereum", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
-label_ETH.place(relx = 0.75, rely = 0.18)
+label_ETH.place(relx = 0.45, rely = 0.08)
 
 	# ---Litecoin---#
 label_LTC = tk.Label(frame, text = "Litecoin", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
-label_LTC.place(relx = 0.75, rely = 0.45)
+label_LTC.place(relx = 0.75, rely = 0.05)
 
 	# ---Stellar Lumens---#
 label_XLM = tk.Label(frame, text = "Stellar \n Lumens", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
-label_XLM.place(relx = 0.75, rely = 0.67)
+label_XLM.place(relx = 0.75, rely = 0.77)
 
 # -----Your amount Entry-----#		# Need to empty entry upon click
 font_entry = Font(family = "Open Sans", size = 18, slant = "italic")
