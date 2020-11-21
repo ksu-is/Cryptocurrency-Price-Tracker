@@ -40,6 +40,18 @@ def update_XLM():
 	price_label_XLM.after(10000, update_XLM)
 	return p
 
+def update_XRP():
+	p = f.get_price(f.price_list, 4)
+	price_label_XRP['text'] = f"${p} USD"
+	price_label_XRP.after(10000, update_XRP)
+	return p
+
+def update_BCH():
+	p = f.get_price(f.price_list, 5)
+	price_label_BCH['text'] = f"${p} USD"
+	price_label_BCH.after(10000, update_BCH)
+	return p
+
 def update_24hr_BTC():
 	p_24hr = f.get_last24hr_price('BTC')
 	s = str(p_24hr)
@@ -83,6 +95,29 @@ def update_24hr_XLM():
 		p24_XLM_label.config(fg = '#cc0000')
 		p24_XLM_label['text'] = f"Last 24hr: {p_24hr}%"
 	p24_XLM_label.after(300000, update_24hr_XLM)
+
+def update_24hr_XRP():
+	p_24hr = f.get_last24hr_price('XRP')
+	s = str(p_24hr)
+	if (s.find("-", 0) == -1):
+		p24_XRP_label.config(fg = '#1aff1a')
+		p24_XRP_label['text'] = f"Last 24hr: +{p_24hr}%"
+	else:
+		p24_XRP_label.config(fg = '#cc0000')
+		p24_XRP_label['text'] = f"Last 24hr: {p_24hr}%"
+	p24_XRP_label.after(300000, update_24hr_XRP)
+
+def update_24hr_BCH():
+	p_24hr = f.get_last24hr_price('BCH')
+	s = str(p_24hr)
+	if (s.find("-", 0) == -1):
+		p24_BCH_label.config(fg = '#1aff1a')
+		p24_BCH_label['text'] = f"Last 24hr: +{p_24hr}%"
+	else:
+		p24_BCH_label.config(fg = '#cc0000')
+		p24_BCH_label['text'] = f"Last 24hr: {p_24hr}%"
+	p24_BCH_label.after(300000, update_24hr_BCH)
+
 # ---------------------------------------------------------------------------------
 	
 f = functions.functions() #Create object to access list of methods
@@ -142,6 +177,23 @@ p24_XLM_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg =
 p24_XLM_label.place(relx = 0.75, rely = 0.95)
 update_24hr_XLM()
 
+# -----Update XRP Price-----
+price_label_XRP = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#000000')
+price_label_XRP.place(relx = 0.75, rely = 0.32)
+XRP_price = update_XRP()
+# ------24hr ago price of XRP-----
+p24_XRP_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#000000')
+p24_XRP_label.place(relx = 0.75, rely = 0.37)
+update_24hr_XRP()
+
+# -----Update BCH Price-----
+price_label_BCH = tk.Label(frame, font = pricefont_secondary, bg ='#0080ff', fg = '#000000')
+price_label_BCH.place(relx = 0.75, rely = 0.58)
+BCH_price = update_BCH()
+# ------24hr ago price of BCH-----
+p24_BCH_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#000000')
+p24_BCH_label.place(relx = 0.75, rely = 0.63)
+update_24hr_BCH()
 
 # ----Set crypto image--------------------------------------------------------------------
 
@@ -173,6 +225,8 @@ XLM_image = ImageTk.PhotoImage(im2_XLM)
 crypto_label_XLM = tk.Label(frame, image = XLM_image, borderwidth = 0)
 crypto_label_XLM.place(relx = 0.65, rely = 0.8)
 
+
+
 # -------Graphs Button & Font--------------------------------------------------------------------
 # buttonfont = Font(family = "Open Sans", size = 20, slant = "italic")
 # graph_button = tk.Button(frame, text = "Graphs", font = buttonfont, bg = '#0080ff', fg = '#f2f2f2',
@@ -199,6 +253,16 @@ label_ETH.place(relx = 0.45, rely = 0.08)
 label_LTC = tk.Label(frame, text = "Litecoin", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
 label_LTC.place(relx = 0.75, rely = 0.05)
+
+	# ---Ripple---#
+label_XRP = tk.Label(frame, text = "Ripple", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
+		bd = 1)
+label_XRP.place(relx = 0.75, rely = 0.25)
+
+	# ---Bitcoin Cash---#
+label_XRP = tk.Label(frame, text = "Bitcoin \n Cash", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
+		bd = 1)
+label_XRP.place(relx = 0.75, rely = 0.45)
 
 	# ---Stellar Lumens---#
 label_XLM = tk.Label(frame, text = "Stellar \n Lumens", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
