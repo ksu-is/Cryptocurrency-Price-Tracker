@@ -144,7 +144,7 @@ price_label_BTC = tk.Label(frame, font = pricefont_BTC, bg ='#0080ff', fg = '#00
 price_label_BTC.place(relx = 0.35, rely = 0.55)
 BTC_price = update_BTC() 
 
-pricefont_secondary = Font(family = "Open Sans", size = 18, slant = "italic")
+pricefont_secondary = Font(family = "Open Sans", size = 18)
 # ------24hr ago price of BTC-----
 p24_BTC_label = tk.Label(frame, font = pricefont_secondary, bg = '#0080ff', fg = '#000000')
 p24_BTC_label.place(relx = 0.35, rely = 0.6)
@@ -209,14 +209,14 @@ im1_ETH = Image.open("ETH.png")
 im2_ETH = im1_ETH.resize((100, 162), Image.ANTIALIAS)
 ETH_image = ImageTk.PhotoImage(im2_ETH)
 crypto_label_ETH = tk.Label(frame, image = ETH_image, borderwidth = 0)
-crypto_label_ETH.place(relx = 0.35, rely = 0.02)
+crypto_label_ETH.place(relx = 0.35, rely = 0.05)
 
 	# ---Litecoin---#
 im1_LTC = Image.open("LTC.png")
 im2_LTC = im1_LTC.resize((100, 100), Image.ANTIALIAS)
 LTC_image = ImageTk.PhotoImage(im2_LTC)
 crypto_label_LTC = tk.Label(frame, image = LTC_image, borderwidth = 0)
-crypto_label_LTC.place(relx = 0.65, rely = 0.05)
+crypto_label_LTC.place(relx = 0.65, rely = 0.06)
 	
 	#---Stellar Lumens---#
 im1_XLM = Image.open("XLM.png")
@@ -230,7 +230,7 @@ im1_XRP = Image.open("XRP.png")
 im2_XRP = im1_XRP.resize((100, 100), Image.ANTIALIAS)
 XRP_image = ImageTk.PhotoImage(im2_XRP)
 crypto_label_XRP = tk.Label(frame, image = XRP_image, borderwidth = 0)
-crypto_label_XRP.place(relx = 0.65, rely = 0.25)
+crypto_label_XRP.place(relx = 0.65, rely = 0.265)
 
 	#---Bitcoin Cash---#
 im1_BCH = Image.open("BCH.png")
@@ -254,7 +254,7 @@ label_BTC = tk.Label(frame, text = "Bitcoin", font = headerfont_BTC, bg = '#0080
 		bd = 1)
 label_BTC.place(relx = 0.35, rely = 0.44)
 
-headerfont_secondary = Font(family = "Open Sans", size = 28, slant = "italic")
+headerfont_secondary = Font(family = "Open Sans", size = 28)
 
 	# ---Ethereum---#
 label_ETH = tk.Label(frame, text = "Ethereum", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
@@ -272,17 +272,17 @@ label_XRP = tk.Label(frame, text = "Ripple", font = headerfont_secondary, bg = '
 label_XRP.place(relx = 0.75, rely = 0.25)
 
 	# ---Bitcoin Cash---#
-label_XRP = tk.Label(frame, text = "Bitcoin \n Cash", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
+label_XRP = tk.Label(frame, text = " Bitcoin \nCash", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
 label_XRP.place(relx = 0.75, rely = 0.45)
 
 	# ---Stellar Lumens---#
-label_XLM = tk.Label(frame, text = "Stellar \n Lumens", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
+label_XLM = tk.Label(frame, text = "Stellar \nLumens", font = headerfont_secondary, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
 label_XLM.place(relx = 0.75, rely = 0.75)
 
 # -----Your amount Entry-----#		# Need to empty entry upon click
-font_entry = Font(family = "Open Sans", size = 18, slant = "italic")
+font_entry = Font(family = "Open Sans", size = 18)
 entryText = tk.StringVar()
 amount = tk.Entry(frame, textvariable = entryText, font = font_entry, width = 20)
 entryText.set("Enter amount")
@@ -302,13 +302,13 @@ combo_box_text2.set("USD")
 combo_box2 = ttk.Combobox(root, width = 5, textvariable = combo_box_text2, values = ["USD", "EUR", "GBP", "JPY"], state = "readonly")
 combo_box2.place(relx = .52, rely = .71)
 
-to = Font(family = "Open Sans", size = 14, slant = "italic")
-label_to = tk.Label(frame, text = "to", font = to, bg = '#0080ff', fg = '#f2f2f2', 
+to = Font(family = "Open Sans", size = 14)
+label_to = tk.Label(frame, text = "to", font = to, bg = '#0080ff', fg = '#000000', 
 		bd = 1)
 label_to.place(relx = 0.497, rely = 0.7055)
 
 # -----Calculate Button-----#
-calc_font = Font(family = "Open Sans", size = 16, slant = "italic")
+calc_font = Font(family = "Open Sans", size = 16)
 calc_button = tk.Button(frame, text = "Calculate", font = calc_font, bg = '#0080ff',
 		fg = '#000000', activebackground = '#005c99', activeforeground = '#f2f2f2', 
 		justify = "center", highlightthickness = 0, bd = 1, relief = "raised",
