@@ -122,7 +122,7 @@ def update_24hr_BCH():
 	
 f = functions.functions() #Create object to access list of methods
 root = tk.Tk() # Create Gui
-root.title("CryptoTracker")
+root.title("Cryptocurrency Price Tracker")
 
 # ----Set Height of the window-----
 canvas = tk.Canvas(root, height = HEIGHT, width = WIDTH)
